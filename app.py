@@ -9,7 +9,7 @@ c = st.button("STOP")
 st.header("TIMER")
 def uhd():
     p = 0
-    for i in range(10):
+    for i in range(60):
         p+=1
         st.write(p)
         time.sleep(1)
@@ -22,24 +22,24 @@ def stop():
 
 
 def shutdown():
-    return os.system("shutdown /s /t 10")
+    return os.system("shutdown -h +1")
 
 def restart():
-    return os.system("shutdown /r /t 10")
+    return os.system("shutdown -r +1")
 
 
 if c:
     stop()
 
 if a:
-    st.write("YOUR SYSTEM WILL SHUTDOWN WITHIN 10 SEC")
+    st.write("YOUR SYSTEM WILL SHUTDOWN WITHIN 60 SEC")
     shutdown()
     uhd()
     if c:
         stop()
 if b:
     time.sleep(1)
-    st.write("YOUR SYSTEM WILL RESTART WITHIN 10 SEC")
+    st.write("YOUR SYSTEM WILL RESTART WITHIN 60 SEC")
     restart()
     uhd()
     if c:
