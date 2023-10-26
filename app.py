@@ -32,14 +32,14 @@ if c:
     stop()
 
 if a:
-    st.toast("YOUR SYSTEM WILL SHUTDOWN WITHIN 10 SEC")
+    st.write("YOUR SYSTEM WILL SHUTDOWN WITHIN 10 SEC")
     shutdown()
     uhd()
     if c:
         stop()
 if b:
     time.sleep(1)
-    st.toast("YOUR SYSTEM WILL RESTART WITHIN 10 SEC")
+    st.write("YOUR SYSTEM WILL RESTART WITHIN 10 SEC")
     restart()
     uhd()
     if c:
